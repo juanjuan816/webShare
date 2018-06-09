@@ -1,0 +1,468 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>埋点 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="dom.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    前端三剑客之HTML与CSS
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../第一章节/html.html">
+            
+                <a href="../第一章节/html.html">
+            
+                    
+                    HTML概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../第一章节/css.html">
+            
+                <a href="../第一章节/css.html">
+            
+                    
+                    CSS概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../JavaScript简介.html">
+            
+                <a href="../JavaScript简介.html">
+            
+                    
+                    前端三剑客之JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="js.html">
+            
+                <a href="js.html">
+            
+                    
+                    初识JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="dom.html">
+            
+                <a href="dom.html">
+            
+                    
+                    DOM介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3" data-path="apply.html">
+            
+                <a href="apply.html">
+            
+                    
+                    埋点
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    其他
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../第三章节/事件设计.html">
+            
+                <a href="../第三章节/事件设计.html">
+            
+                    
+                    js sdk源码分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../第三章节/console.html">
+            
+                <a href="../第三章节/console.html">
+            
+                    
+                    浏览器控制台应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >埋点</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4E8B;&#x4EF6;&#x8BBE;&#x8BA1;&#x4E2D;&#x7684;&#x5E94;&#x7528;">&#x4E8B;&#x4EF6;&#x8BBE;&#x8BA1;&#x4E2D;&#x7684;&#x5E94;&#x7528;</h1>
+<p>sa&#x65B9;&#x6CD5;:</p>
+<pre><code>- sa.login(user_id) --&#x628A;SDK&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7684;cookie_id&#x5173;&#x8054;&#x6210;&#x73B0;&#x5728;&#x4F20;&#x5165;&#x7684;user_id&#xFF0C;&#x4E14;&#x4EE5;&#x540E;&#x4E00;&#x76F4;&#x4F1A;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;user_id
+- sa.identify(id) --&#x4FEE;&#x6539;&#x533F;&#x540D;id&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x628A;cookie_id&#x4F5C;&#x4E3A;distinct_id&#x3002;&#x5982;&#x679C;&#x80FD;&#x53D6;&#x5230;&#x5176;&#x4ED6;id&#x4F5C;&#x4E3A;&#x533F;&#x540D;id&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BE5;&#x65B9;&#x6CD5;&#x4FEE;&#x6539;
+- sa.logout() --sa.logout():&#x53D6;&#x6D88;&#x5F53;&#x524D;login&#x7684;id&#xFF0C;&#x6539;&#x6210;&#x6700;&#x521D;&#x81EA;&#x4ECE;&#x751F;&#x6210;&#x7684;cookie_id;sa.logout(true):&#x53D6;&#x6D88;&#x5F53;&#x524D;login&#x7684;id&#xFF0C;&#x91CD;&#x65B0;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;cookie_id
+- sa.track(&apos;event&apos;,properties) --&#x81EA;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;&#x8FFD;&#x8E2A;
+- sa.registerPage(Object) --&#x8BBE;&#x7F6E;&#x516C;&#x5171;&#x5C5E;&#x6027;
+
+- sa.setProfile() --&#x76F4;&#x63A5;&#x8BBE;&#x7F6E;&#x7528;&#x6237;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x5B58;&#x5728;&#x5219;&#x8986;&#x76D6;
+- sa.setOnceProfile() --&#x8BBE;&#x7F6E;&#x7528;&#x6237;&#x5C5E;&#x6027;&#xFF0C;&#x4E0D;&#x5B58;&#x5728;&#x5219;&#x8BBE;&#x7F6E;&#xFF0C;&#x5B58;&#x5728;&#x5C31;&#x4E0D;&#x8BBE;&#x7F6E;
+- sa.appendProfile() --&#x7ED9;&#x6570;&#x7EC4;&#x6DFB;&#x52A0;&#x5C5E;&#x6027;&#x503C;
+- sa.increcementProfile() --&#x5BF9;&#x5F53;&#x524D;&#x7528;&#x6237;&#x7684;&#x5C5E;&#x6027;&#x505A;&#x9012;&#x589E;&#x6216;&#x9012;&#x51CF;
+- sa.deleteProfile() --&#x5220;&#x9664;&#x5F53;&#x524D;&#x8FD9;&#x4E2A;&#x7528;&#x6237;&#x53CA;&#x4ED6;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;
+- sa.unsetProfile() --&#x5220;&#x9664;&#x5F53;&#x524D;&#x7528;&#x6237;&#x7684;&#x4E00;&#x4E9B;&#x5C5E;&#x6027;
+</code></pre><p>1.&#x4EE5;&#x6211;&#x4EEC;&#x6280;&#x672F;&#x6587;&#x6863;&#x4E2D;
+<a href="http://www.fangao.cc/" target="_blank">&#x996D;&#x7CD5;&#x7F51;</a>
+&#x7684;&#x524D;&#x7AEF;&#x57CB;&#x70B9;&#x4E3E;&#x4F8B;&#xFF0C;&#x770B;&#x7A0B;&#x5E8F;&#x5458;&#x4EEC;&#x662F;&#x5982;&#x4F55;&#x5199;&#x524D;&#x7AEF;&#x57CB;&#x70B9;&#x4EE3;&#x7801;&#x7684;</p>
+<p>2.&#x9700;&#x6C42;&#x5206;&#x6790;&#xFF1A;</p>
+<p><img src="../img/fangao.jpg" alt="img"></p>
+<p>3.&#x4E8B;&#x4EF6;&#x8BBE;&#x8BA1;</p>
+<p><img src="../img/fangao_design.jpg" alt="img"></p>
+<p>4.&#x524D;&#x7AEF;&#x57CB;&#x70B9;</p>
+<pre><code>
+  sa.quick(&apos;autoTrack&apos;);//&#x5F00;&#x542F;&#x81EA;&#x52A8;&#x91C7;&#x96C6;
+  jQuery(function(){
+    var $ = jQuery;
+    //qq&#x4E0A;    
+    $(&apos;#menu-item-15213&apos;).on(&apos;click&apos;,function(){
+      sa.track(&apos;qq_talk&apos;,{path:location.pathname,position:&apos;&#x5934;&#x90E8;&apos;});
+    });
+    //qq&#x53F3;    
+    $(document).on(&apos;click&apos;,&apos;#scrightdown&apos;,function(){
+      sa.track(&apos;qq_talk&apos;,{path:location.pathname,position:&apos;&#x53F3;&#x4FA7;&apos;});
+    });
+    $(document).on(&apos;click&apos;,&apos;.pop-cover a img&apos;,function(){
+      sa.track(&apos;qq_talk&apos;,{path:location.pathname,position:&apos;&#x4E2D;&#x95F4;&apos;});
+    });
+    $(document).on(&apos;click&apos;,&apos;#hidden-wx-a&apos;,function(){
+      sa.track(&apos;qq_talk&apos;,{path:location.pathname,position:&apos;&#x7559;&#x8A00;&apos;});
+    });
+    $(document).on(&apos;click&apos;,&apos;#tan-qq-1&apos;,function(){
+      sa.track(&apos;qq_talk&apos;,{path:location.pathname,position:&apos;&#x9884;&#x7EA6;&apos;});
+    });
+
+   //&#x8D2D;&#x7269;&#x8F66;
+    if(location.pathname === &apos;/course&apos;){
+      $(document).on(&apos;click&apos;,&apos;.to-pay&apos;,function(){ 
+        var qq = $(&apos;#qq-cart&apos;).val();
+        if(/^\d{5,10}$/.test(qq)){
+            sa.track(&apos;to_pay&apos;,{path:location.pathname,userqq:qq});
+            sa.trackSignup(qq,&apos;trackSignupRegister&apos;);
+        }
+      });      
+    }
+
+// reigster&#x9875;&#x9762;
+  if(location.pathname === &apos;/register&apos;){
+    $(document).on(&apos;click&apos;,&apos;input[type=&quot;submit&quot;][value=&quot;&#x63D0;&#x4EA4;&quot;]&apos;,function(){
+      var qq = $(&apos;input[type=&quot;text&quot;][name=&quot;qqnumber&quot;]&apos;).eq(0).val(); 
+      var username = $(&apos;input[type=&quot;text&quot;][name=&quot;username&quot;]&apos;).eq(0).val(); 
+      var list = [];
+jQuery(&apos;.fangao-form section&apos;).slice(0,1).find(&apos;.wpcf7-list-item input:checked&apos;).each(function(a,b){ list.push($(b).val()) })
+
+      sa.track(&apos;success_buy_page&apos;,{buy_page_list:list});
+      sa.trackSignup(qq,&apos;trackSignupRegister&apos;);
+      sa.setProfile({qq:String(qq),username:username,buy_page_list:list});    
+    });
+  }
+
+// &#x4ED8;&#x6B3E;&#x6210;&#x529F;&#x9875;&#x9762;
+  if(location.pathname.indexOf(&apos;/checkout/order-received/&apos;) !== -1){
+
+      var order_id = jQuery(&apos;.order_details .order strong&apos;).text();
+      var order_date = jQuery(&apos;.order_details .date strong&apos;).text();
+      var order_amount = parseInt(jQuery(&apos;.order_details .total strong&apos;).text().replace(/[^.0-9]/g,&apos;&apos;));
+      var order_product = jQuery(&apos;.order_details .order_item .product-name&apos;).text().replace(/\s/g,&apos;&apos;).replace(/&#xD7;\d+/,&apos;&apos;);
+      sa.track(&apos;success_buy&apos;,{order_id:order_id,order_date:order_date,order_amount:order_amount,order_product:order_product  })
+   }
+
+// &#x63D0;&#x4EA4;&#x8054;&#x7CFB;&#x4EBA;
+$(&apos;#contact-us #submit&apos;).on(&apos;click&apos;,function(){
+
+     var name = $(&apos;#contact-us #name&apos;).val();
+      var email = $(&apos;#contact-us #email&apos;).val();
+      var cellphone = $(&apos;#contact-us #tel&apos;).val();
+      var temp = email.replace(/@.+/g,&apos;&apos;);
+    var qq;
+    if(/^\d+$/.test(temp)){qq = temp;}
+
+  sa.track(&apos;place_contact&apos;,{email:email,cellphone:cellphone,u_name:name});
+  qq &amp;&amp; sa.trackSignup(qq,&apos;trackSignupContact&apos;);
+})
+});
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="dom.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: DOM介绍">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"埋点","level":"1.3.3","depth":2,"next":{"title":"其他","level":"1.4","depth":1,"ref":"","articles":[{"title":"js sdk源码分析","level":"1.4.1","depth":2,"path":"第三章节/事件设计.md","ref":"第三章节/事件设计.md","articles":[]},{"title":"浏览器控制台应用","level":"1.4.2","depth":2,"path":"第三章节/console.md","ref":"第三章节/console.md","articles":[]}]},"previous":{"title":"DOM介绍","level":"1.3.2","depth":2,"path":"第二章节/dom.md","ref":"第二章节/dom.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"第二章节/apply.md","mtime":"2018-03-27T10:36:01.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-09T06:18:24.333Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
